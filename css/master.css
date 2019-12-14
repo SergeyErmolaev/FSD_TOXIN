@@ -7,8 +7,9 @@ body {
 .container{
   width: 100%;
   max-width: 1440px;
-  padding: 15px 140px;
+  padding: 15px 0px;
   margin: 0 auto;
+  border: 1px solid; /*Не забыть стереть*/
 }
 
 .container:after {
@@ -19,6 +20,7 @@ body {
 
 .logo{
   float: left;
+  padding-left: 140px;
 }
 
 .menu {
@@ -27,13 +29,65 @@ body {
 
 .button_group {
   float: right;
+  padding-right: 140px;
 }
 
 nav li {
   display: inline-block;
 }
 
-nav a {
+/*nav a {
+  text-decoration: none;
+  color: rgba(31, 32, 65, 0.5);
+}*/
+
+.col-1-2 {
+  width: 50%;
+  float: left;
+}
+
+.col-1-2 li {
+  display: inline-block;
+}
+
+li a {
   text-decoration: none;
   color: rgba(31, 32, 65, 0.5);
 }
+
+div .container {
+
+  padding: 0px;
+}
+
+@keyframes clr
+{
+  0%   {background-image: url('../img/image.jpg');}
+  33%  {background-image: url('../img/image 2.jpg') }
+  66% {background-image: url('../img/image 3.jpg') ;}
+  100% {background-image: url('../img/image.jpg');}
+}
+.fadein
+{
+  width:100wh;
+  height:100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  animation: clr 20s infinite;
+  animation-timing-function: steps(1, start);
+}
+
+/*Автоматическая смена картинок
+@keyframes fade {
+  0%   { opacity: 0; }
+  11.11%   { opacity: 1; }
+  33.33%  { opacity: 1; }
+  44.44%  { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+.fadein { position:relative; width:1440px; height: 830px;}
+.fadein img { position:absolute; width:1440px; height: 830px; left:0; right:0; opacity:0; animation-name: fade; animation-duration: 9s; animation-iteration-count: infinite; }
+.fadein img:nth-child(1) { animation-delay: 0s;  }
+.fadein img:nth-child(2) { animation-delay: 3s;  }
+.fadein img:nth-child(3) { animation-delay: 6s;  }
