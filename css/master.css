@@ -62,15 +62,17 @@ div .container {
 
 @keyframes clr
 {
-  0%   {background-image: url('../img/image.jpg');}
-  33%  {background-image: url('../img/image 2.jpg') }
-  66% {background-image: url('../img/image 3.jpg') ;}
-  100% {background-image: url('../img/image.jpg');}
+  0%   {background-image: url('../img/image.png');}
+  33%  {background-image: url('../img/image 2.png');
+        }
+  66% {background-image: url('../img/image 3.png') ;
+        }
+  100% {background-image: url('../img/image.png');}
 }
 .fadein
 {
-  width:100wh;
-  height:100vh;
+  width:100%;
+  height: 830px;
   background-size: cover;
   background-repeat: no-repeat;
   animation: clr 20s infinite;
@@ -86,8 +88,9 @@ div .container {
   100% { opacity: 0; }
 }
 
-.fadein { position:relative; width:1440px; height: 830px;}
-.fadein img { position:absolute; width:1440px; height: 830px; left:0; right:0; opacity:0; animation-name: fade; animation-duration: 9s; animation-iteration-count: infinite; }
+.fadein { position:relative; width:100wh; height: 830px;}
+.fadein img { position:absolute; width:100%; left:0; right:0; opacity:0; animation-name: fade; animation-duration: 9s; animation-iteration-count: infinite; }
 .fadein img:nth-child(1) { animation-delay: 0s;  }
 .fadein img:nth-child(2) { animation-delay: 3s;  }
 .fadein img:nth-child(3) { animation-delay: 6s;  }
+*/
